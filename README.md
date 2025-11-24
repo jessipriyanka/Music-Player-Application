@@ -21,7 +21,7 @@ CO7095 Group Project
 - To reset data, delete `data/songs.json` before running.
 
 ## Team members
-- Member A — 
+- Member A — Himanish Debnath Himu (hdh3)
 - Member B — 
 - Member C — 
 - Member D — 
