@@ -44,12 +44,12 @@ This project uses **`pytest`** for running all test suites.
 
 ### 📂 Project Structure & Team Division
 
-| Member                                       | Role | Key File(s) | Focus |
-|:---------------------------------------------| :--- | :--- | :--- |
-| ** HIMANISH DEBNATH HIMU (hdh3) **           | CLI & Docs | `main.py`, `data/songs.json` | JSON handling, User Interface. |
-| ** Javvaji Lalitha Vighneswar (lvj4) () **   | Storage & QA | `player/storage.py` | White-box testing coverage. |
-| ** Jsica () **                               | Playback & QA | `player/music_player.py` | Black-box testing boundary checks. |
-| ** Janvi () **                               | Playlist & QA | `player/playlist_manager.py` | Symbolic/Concolic execution. |
+| Member                                        | Role | Key File(s) | Focus |
+|:----------------------------------------------| :--- | :--- | :--- |
+| ** HIMANISH DEBNATH HIMU (hdh3) **            | CLI & Docs | `main.py`, `data/songs.json` | JSON handling, User Interface. |
+| ** Javvaji Lalitha Vighneswar (lvj4)  **      | Storage & QA | `player/storage.py` | White-box testing coverage. |
+| ** Jessica Priyanka David Penumolu (jpdp1) ** | Playback & QA | `player/music_player.py` | Black-box testing boundary checks. |
+| ** Jahnavi Posani (jp698) **                  | Playlist & QA | `player/playlist_manager.py` | Symbolic/Concolic execution. |
 
 
 ---
