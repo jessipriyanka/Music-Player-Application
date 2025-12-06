@@ -9,11 +9,4 @@ class MusicPlayer:
         self.current_song_id = None
         self.state = "stopped"  # playing, paused, stopped
 
-    def play(self, song_id: int) -> str:
-        """
-        Simulate playing a song with several branches:
-        - invalid song id
-        - already playing same song
-        - paused same song -> resume
-        - play new song
-        """
+
