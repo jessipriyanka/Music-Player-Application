@@ -44,4 +44,15 @@ class PlaylistManager:
 
         return new_song
 
+    def remove_song(self, song_id: int) -> bool:
+        """
+        Remove a song by its ID.
+        Returns True if removed, False if not found.
+        """
+        for i, song in enumerate(self.songs):
+            if song["id"] == song_id:
+                self.songs.pop(i)
+                self.storage.save_songs(self.songs)
+                return True
+        return False
 
