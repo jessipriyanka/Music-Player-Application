@@ -1,9 +1,4 @@
 class PlaylistManager:
-    """
-    This class manages songs in memory.
-    It loads songs from storage and provides add, remove, search, and list features.
-    """
-
     def __init__(self, storage_module):
         self.storage = storage_module
         self.songs = self.storage.load_songs()
@@ -14,10 +9,6 @@ class PlaylistManager:
             self.next_id = 1
 
     def add_song(self, title: str, artist: str, duration: int) -> dict:
-        """
-        Add a new song with validation and unique ID.
-        Has multiple branches for white-box/symbolic testing.
-        """
         if title.strip() == "":
             raise ValueError("Song title cannot be empty")
 
@@ -41,18 +32,23 @@ class PlaylistManager:
         self.songs.append(new_song)
         self.storage.save_songs(self.songs)
         self.next_id += 1
-
         return new_song
 
     def remove_song(self, song_id: int) -> bool:
-        """
-        Remove a song by its ID.
-        Returns True if removed, False if not found.
-        """
         for i, song in enumerate(self.songs):
             if song["id"] == song_id:
                 self.songs.pop(i)
                 self.storage.save_songs(self.songs)
                 return True
         return False
+
+    def search(self, query: str) -> list:
+        query = query.lower()
+        return [song for song in self.songs
+                if query in song["title"].lower() or query in song["artist"].lower()]
+
+    def list_songs(self) -> list:
+        return sorted(self.songs, key=lambda x: x["id"])
+
+
 
