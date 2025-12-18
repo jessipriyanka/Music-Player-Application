@@ -34,3 +34,9 @@ def main():
             except Exception as e:
                 print("Error:", str(e))
 
+            elif choice == "2":
+            song_id = int(input("Enter song ID to remove: "))
+            if manager.remove_song(song_id):
+                print("Song removed.")
+            else:
+                print("Song not found.")
