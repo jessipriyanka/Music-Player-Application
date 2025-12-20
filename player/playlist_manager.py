@@ -34,4 +34,23 @@ class PlaylistManager:
         self.next_id += 1
         return new_song
 
+    def remove_song(self, song_id: int) -> bool:
+        for i, song in enumerate(self.songs):
+            if song["id"] == song_id:
+                self.songs.pop(i)
+                self.storage.save_songs(self.songs)
+                return True
+        return False
+
+    def search(self, query: str) -> list:
+        query = query.lower()
+        return [song for song in self.songs
+                if query in song["title"].lower() or query in song["artist"].lower()]
+
+    def list_songs(self) -> list:
+        return sorted(self.songs, key=lambda x: x["id"])
+
+
+
+
 
