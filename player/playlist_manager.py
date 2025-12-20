@@ -8,7 +8,6 @@ class PlaylistManager:
         else:
             self.next_id = 1
 
-
     def add_song(self, title: str, artist: str, duration: int) -> dict:
         if title.strip() == "":
             raise ValueError("Song title cannot be empty")
@@ -23,7 +22,6 @@ class PlaylistManager:
             if song["title"].lower() == title.lower() and song["artist"].lower() == artist.lower():
                 return {"status": "duplicate"}
 
-
         new_song = {
             "id": self.next_id,
             "title": title,
@@ -36,7 +34,6 @@ class PlaylistManager:
         self.next_id += 1
         return new_song
 
-
     def remove_song(self, song_id: int) -> bool:
         for i, song in enumerate(self.songs):
             if song["id"] == song_id:
@@ -45,12 +42,10 @@ class PlaylistManager:
                 return True
         return False
 
-
     def search(self, query: str) -> list:
         query = query.lower()
         return [song for song in self.songs
                 if query in song["title"].lower() or query in song["artist"].lower()]
-
 
     def list_songs(self) -> list:
         return sorted(self.songs, key=lambda x: x["id"])
