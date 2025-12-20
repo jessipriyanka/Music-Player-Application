@@ -20,3 +20,12 @@ def load_songs() -> list:
 
     return []
 
+
+def save_songs(songs: list) -> None:
+    """Safely write songs to JSON via temp file."""
+    with open(TEMP_FILE, "w") as temp:
+        json.dump(songs, temp, indent=4)
+
+    os.replace(TEMP_FILE, DATA_FILE)
+
+
