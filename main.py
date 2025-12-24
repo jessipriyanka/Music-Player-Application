@@ -34,9 +34,42 @@ def main():
             except Exception as e:
                 print("Error:", str(e))
 
-            elif choice == "2":
+        elif choice == "2":
             song_id = int(input("Enter song ID to remove: "))
             if manager.remove_song(song_id):
                 print("Song removed.")
             else:
                 print("Song not found.")
+
+        elif choice == "3":
+            query = input("Search: ")
+            results = manager.search(query)
+            for s in results:
+                print(s)
+
+        elif choice == "4":
+            for s in manager.list_songs():
+                print(s)
+
+        elif choice == "5":
+            sid = int(input("Song ID to play: "))
+            print(player.play(sid))
+
+        elif choice == "6":
+            print(player.pause())
+
+        elif choice == "7":
+            print(player.stop())
+
+        elif choice == "8":
+            print("Goodbye!")
+            break
+
+        else:
+            print("Invalid option. Try again.")
+
+
+if __name__ == "__main__":
+    main()
+
+

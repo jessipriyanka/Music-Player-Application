@@ -4,7 +4,6 @@ class MusicPlayer:
         self.current_song_id = None
         self.state = "stopped"
 
-
     def play(self, song_id: int) -> str:
         ids = [s["id"] for s in self.manager.songs]
         if song_id not in ids:
@@ -21,15 +20,15 @@ class MusicPlayer:
         self.state = "playing"
         return "playing"
 
-
     def pause(self) -> str:
         if self.state == "playing":
             self.state = "paused"
             return "paused"
         return "not_playing"
 
-
     def stop(self) -> str:
         self.current_song_id = None
         self.state = "stopped"
         return "stopped"
+
+

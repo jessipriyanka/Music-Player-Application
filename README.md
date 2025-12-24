@@ -44,6 +44,7 @@ This project uses **`pytest`** for running all test suites.
 
 ### 📂 Project Structure & Team Division
 
+
 | Member                                        | Role | Key File(s) | Focus |
 |:----------------------------------------------| :--- | :--- | :--- |
 | ** HIMANISH DEBNATH HIMU (hdh3) **            | CLI & Docs | `main.py`, `data/songs.json` | JSON handling, User Interface. |
@@ -59,4 +60,5 @@ This project uses **`pytest`** for running all test suites.
 * **Playlist Management:** Add, Remove, Search, and List songs (via `playlist_manager.py`).
 * **Storage System:** Safe loading and saving of songs to `songs.json` (via `storage.py`).
 * **Playback Simulation:** Play, Pause, and Stop commands (via `music_player.py`).
+
 
