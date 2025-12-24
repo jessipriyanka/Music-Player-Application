@@ -57,8 +57,5 @@ This project uses **`pytest`** for running all test suites.
 
 ### 📌 Core Features (Sprint 1, Complete)
 
-* **Playlist Management:** Add, Remove, Search, and List songs (via `playlist_manager.py`).
-* **Storage System:** Safe loading and saving of songs to `songs.json` (via `storage.py`).
-* **Playback Simulation:** Play, Pause, and Stop commands (via `music_player.py`).
 
 
