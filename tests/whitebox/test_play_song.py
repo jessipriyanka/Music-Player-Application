@@ -3,6 +3,7 @@ from player.playlist_manager import PlaylistManager
 from player.music_player import MusicPlayer
 
 
+
 def test_play_song_whitebox(tmp_path, monkeypatch):
     test_file = tmp_path / "songs.json"
     test_file.write_text('[{"id":1,"title":"A","artist":"B","duration":120}]')
@@ -12,6 +13,7 @@ def test_play_song_whitebox(tmp_path, monkeypatch):
 
     manager = PlaylistManager(storage)
     player = MusicPlayer(manager)
+
 
     assert player.play(1) == "playing"
     assert player.play(1) == "already_playing"
