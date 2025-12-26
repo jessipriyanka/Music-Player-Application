@@ -2,6 +2,7 @@ from player import storage
 from player.playlist_manager import PlaylistManager
 
 
+
 def test_add_song_symbolic(tmp_path, monkeypatch):
     test_file = tmp_path / "songs.json"
     test_file.write_text("[]")
