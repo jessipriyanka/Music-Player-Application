@@ -50,7 +50,3 @@ class PlaylistManager:
     def list_songs(self) -> list:
         return sorted(self.songs, key=lambda x: x["id"])
 
-
-
-
-
