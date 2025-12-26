@@ -2,6 +2,7 @@ from player import storage
 from player.playlist_manager import PlaylistManager
 
 
+
 def test_add_song_blackbox(tmp_path, monkeypatch):
     test_file = tmp_path / "songs.json"
     test_file.write_text("[]")
@@ -12,6 +13,7 @@ def test_add_song_blackbox(tmp_path, monkeypatch):
     manager = PlaylistManager(storage)
 
     new_song = manager.add_song("Test Song", "Test Artist", 120)
+
 
     assert new_song["title"] == "Test Song"
     assert len(manager.songs) == 1
