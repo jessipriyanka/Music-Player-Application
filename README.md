@@ -45,17 +45,36 @@ This project uses **`pytest`** for running all test suites.
 ### 📂 Project Structure & Team Division
 
 
-| Member                                        | Role | Key File(s) | Focus |
-|:----------------------------------------------| :--- | :--- | :--- |
-| ** HIMANISH DEBNATH HIMU (hdh3) **            | CLI & Docs | `main.py`, `data/songs.json` | JSON handling, User Interface. |
-| ** Javvaji Lalitha Vighneswar (lvj4)  **      | Storage & QA | `player/storage.py` | White-box testing coverage. |
-| ** Jessica Priyanka David Penumolu (jpdp1) ** | Playback & QA | `player/music_player.py` | Black-box testing boundary checks. |
-| ** Jahnavi Posani (jp698) **                  | Playlist & QA | `player/playlist_manager.py` | Symbolic/Concolic execution. |
+| Member                                        | Role | Key File(s)                                                  | Focus |
+|:----------------------------------------------| :--- |:-------------------------------------------------------------| :--- |
+| ** HIMANISH DEBNATH HIMU (hdh3) **            | CLI & Docs | `main.py`, `_init_.py` ,`data/songs.json` , ` team (proof) ` | JSON handling, User Interface. |
+| ** Javvaji Lalitha Vighneswar (lvj4)  **      | Storage & QA | `player/storage.py` , ` tests/symbolic `                     | White-box testing coverage. |
+| ** Jessica Priyanka David Penumolu (jpdp1) ** | Playback & QA | `player/music_player.py` , ` tests/blackcox `                | Black-box testing boundary checks. |
+| ** Jahnavi Posani (jp698) **                  | Playlist & QA | `player/playlist_manager.py` , ` tests/whitebox `            | Symbolic/Concolic execution. |
 
 
 ---
 
-### 📌 Core Features (Sprint 1, Complete)
+🏃 – Sprint Summary
+
+🟦 Sprint 1 — Foundation & Core Features (Completed)
+
+Project structure and JSON storage setup.
+Implementation of Storage, PlaylistManager, and MusicPlayer basic controls.
+Initial Black-box, White-box, and Symbolic test skeletons.
+
+🟩 Sprint 2 — Expanded Logic & QA Coverage (Completed)
+
+Storage error handling (missing/corrupt JSON).
+Playback edge cases (resume, already playing, invalid ID).
+Expanded test coverage for all primary functions.
+
+🟧 Sprint 3 — Integration & Final QA (Completed)
+
+Full integration across all modules.
+Symbolic execution tree completion.
+Team contribution documentation and final verification
+
 
 
 
