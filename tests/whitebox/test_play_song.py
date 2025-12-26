@@ -10,6 +10,14 @@ def test_play_song_whitebox(tmp_path, monkeypatch):
     monkeypatch.setattr(storage, "DATA_FILE", str(test_file))
     monkeypatch.setattr(storage, "TEMP_FILE", str(tmp_path / "temp.json"))
 
+    manager = PlaylistManager(storage)
+    player = MusicPlayer(manager)
+
+    assert player.play(1) == "playing"
+    assert player.play(1) == "already_playing"
+    assert player.pause() == "paused"
+    assert player.play(1) == "resumed"
+
 
 
 
