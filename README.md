@@ -8,41 +8,36 @@ This project implements mandatory QA techniques including Black-box, White-box, 
 
 ---
 
-### 🚀 How to Run the Application
+## 📌 Project Overview
 
-1.  **Open in PyCharm:**
-    * In PyCharm, go to **File** $\rightarrow$ **Open**.
-    * Select the root project folder: `music_player/`.
-2.  **Run `main.py`:**
-    * Find the file `main.py`.
-    * Right-click on `main.py` and select **Run 'main'**.
+The Music Player allows users to:
+- Add songs with validation
+- Remove songs
+- Search songs
+- List all songs
+- Play, pause, resume, and stop playback
 
-The application will start with the main menu interface.
-
----
-
-### 🧪 Running Tests (Quality Assurance)
-
-This project uses **`pytest`** for running all test suites.
-
-1.  **Install `pytest`** (if not already installed):
-    ```bash
-    pip install pytest
-    ```
-2.  **Run All Tests:**
-    Open the **PyCharm Terminal** (View $\rightarrow$ Tool Windows $\rightarrow$ Terminal) and execute:
-    ```bash
-    pytest tests/
-    ```
-3.  **Run Specific QA Suites:**
-    You can target specific mandatory testing folders:
-    * **Black-box tests :** `pytest tests/blackbox/`
-    * **White-box tests :** `pytest tests/whitebox/`
-    * **Symbolic/Concolic tests :** `pytest tests/symbolic/`
+The application:
+- Is implemented **only in Python**
+- Uses a **text-based (console) interface**
+- Uses a **JSON file** for storage
+- Does **not** use a GUI or database (as per module rules)
 
 ---
 
-### 📂 Project Structure & Team Division
+## 🛠️ Technologies and Tools Used
+
+- **Programming Language:** Python
+- **IDE:** PyCharm
+- **Version Control:** GitHub
+- **Testing Framework:** PyTest
+- **Coverage Tool:** Coverage.py
+- **Complexity Tool:** Radon
+- **Project Management:** GitHub Projects (Agile Scrum
+
+---
+
+### 📂 Team Division
 
 
 | Member                                        | Role | Key File(s)                                                  | Focus |
@@ -55,26 +50,87 @@ This project uses **`pytest`** for running all test suites.
 
 ---
 
-🏃 – Sprint Summary
+## ▶️ How to Run the Application
 
-🟦 Sprint 1 — Foundation & Core Features (Completed)
+### Step 1: Open Project in PyCharm
+1. Launch **PyCharm**
+2. Select **File → Open**
+3. Choose the root project folder
 
-Project structure and JSON storage setup.
-Implementation of Storage, PlaylistManager, and MusicPlayer basic controls.
-Initial Black-box, White-box, and Symbolic test skeletons.
+### Step 2: Run the Program
+1. Open `main.py`
+2. Right-click and select **Run 'main'**
 
-🟩 Sprint 2 — Expanded Logic & QA Coverage (Completed)
+The console-based menu will appear, allowing you to interact with the Music Player.
 
-Storage error handling (missing/corrupt JSON).
-Playback edge cases (resume, already playing, invalid ID).
-Expanded test coverage for all primary functions.
+---
 
-🟧 Sprint 3 — Integration & Final QA (Completed)
+## 🧪 How to Run Tests
 
-Full integration across all modules.
-Symbolic execution tree completion.
-Team contribution documentation and final verification
+### Install Required Tools
+If not already installed:
+```bash
+python -m pip install pytest coverage radon
 
+
+Run All Tests
+  python -m pytest
+
+Run Specific Test Suites
+  python -m pytest team/259034924/test/concolic/
+  python -m pytest team/249057908/test/whitebox/
+  python -m pytest team/259046094/test/symbolic/
+  python -m pytest team/259052949/test/blackbox/
+
+📊 Test Coverage Measurement
+
+To measure test coverage:
+  python -m coverage run -m pytest
+  python -m coverage report
+
+(Optional HTML report)
+  python -m coverage html
+
+📐 Cyclomatic Complexity Measurement
+Cyclomatic complexity was measured using Radon:
+  python -m radon cc player/playlist_manager.py -s
+  python -m radon cc player/music_player.py -s
+  python -m radon cc player/storage.py -s
+
+Functions such as add_song() and play() achieve complexity values ≥ 10, meeting module requirements.
+
+🔬 Research Component
+
+Symbolic Execution
+
+Performed manually
+Symbolic execution trees were constructed for complex functions
+Path conditions were derived and documented
+
+Concolic Testing
+
+Combined concrete execution with symbolic constraint negation
+Implemented using PyTest
+All concolic tests executed successfully
+
+🧩 Agile Development
+
+36 user stories (9 per team member)
+3 sprints planned and completed
+Story points estimated using Planning Poker
+Progress tracked using GitHub Projects
+Velocity, burndown, and EVM calculated and documented
+
+📈 Project Estimation & Measurement
+
+The project applies:
+
+PERT analysis with critical path identification
+COCOMO I and COCOMO II for effort estimation
+Earned Value Management (EVM) for project tracking
+CMMI Level 2 process documentation
+
+All calculations and evidence are included in the final report.
 
 
 
