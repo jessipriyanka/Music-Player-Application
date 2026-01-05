@@ -1,4 +1,32 @@
-[]
-
-
-
+[
+    {
+        "id": 1,
+        "title": "sleep",
+        "artist": "zzz",
+        "duration": 300
+    },
+    {
+        "id": 2,
+        "title": "nonstop",
+        "artist": "xyz",
+        "duration": 200
+    },
+    {
+        "id": 3,
+        "title": "start",
+        "artist": "mac",
+        "duration": 500
+    },
+    {
+        "id": 4,
+        "title": "stop",
+        "artist": "chess",
+        "duration": 400
+    },
+    {
+        "id": 5,
+        "title": "aaa",
+        "artist": "bbb",
+        "duration": 200
+    }
+]
